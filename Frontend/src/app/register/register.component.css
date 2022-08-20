@@ -1,0 +1,168 @@
+ .homebody {
+   min-height: 700px;
+   margin-top: 5%;
+   background-color: white;
+   /* background-image: url('https://retail.ictkerala.org/pluginfile.php/128203/course/overviewfiles/testing.jpg'); */
+   background-image: url("https://www.epfl.ch/education/master/wp-content/uploads/2018/11/IC_DS_MA_X.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+ }
+
+ input {
+   font-weight: bold;
+
+ }
+
+ div.transbox {
+   /* margin: 30px; */
+   background-color: #ffffff;
+   border: 5px solid rgb(0, 0, 0);
+   opacity: 0.7;
+ }
+
+ .form-control {
+   width: 48%;
+   border: 2px solid rgb(84, 6, 152);
+   color: rgb(119, 5, 180);
+   border-radius: 10px;
+ }
+
+ ::placeholder {
+   color: rgb(119, 5, 180);
+   font-weight: lighter;
+ }
+
+
+ .student {
+   width: 600px;
+
+ }
+
+ .email {
+   float: right;
+   margin-top: -14%;
+   margin-right: -50%;
+   width: 600px;
+   display: inline;
+ }
+
+ .dob {
+   float: right;
+   margin-top: -14%;
+   margin-right: -50%;
+   width: 600px;
+ }
+
+
+ .course {
+   float: right;
+   margin-top: -53%;
+   margin-right: -50%;
+   width: 600px;
+ }
+
+ .batch {
+   float: right;
+   margin-top: -40%;
+   margin-right: -50%;
+   width: 600px;
+ }
+
+ .profilepicture {
+   float: right;
+   margin-top: -25%;
+   margin-right: -50%;
+   width: 600px;
+   max-height: 600px;
+
+ }
+
+ #phone {
+   width: 37%;
+   margin-left: 70px;
+   margin-top:-6% ;
+   
+ }
+
+ #code {
+   width: 10%;
+   
+ }
+
+ i {
+   color: rgb(196, 8, 8);
+ }
+
+ .transbox {
+   padding: 40px;
+   margin-top: 10vh;
+   margin-bottom: 10vh;
+   border-radius: 80px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ form {
+   font-family: 'Blinker', sans-serif;
+
+ }
+
+ option {
+   zoom: 1.1;
+
+ }
+
+ label {
+   font-weight: bold;
+ }
+
+ .popup-button {
+   margin-left: 35%;
+   display: block;
+   text-align: center;
+   text-decoration: none;
+   font-weight: 800;
+   font-size: 18px;
+   text-transform: uppercase;
+   color: black;
+   border-radius: 80px;
+   padding: 1em 3em;
+   background-size: 100% auto;
+   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+   background-image: linear-gradient(to right, #773ff8 0%, #f875e6 50%, #753ef5 100%);
+   transition: 0.5s;
+ }
+
+ .popup-button:hover {
+   background-position: right center;
+ }
+
+ h3 {
+
+   text-transform: uppercase;
+   background-image: linear-gradient(-225deg,
+       #231557 0%,
+       #44107a 29%,
+       #ff1361 67%,
+       #fff800 100%);
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+   font-size: 55px;
+   font-weight: bolder;
+   margin-left: 200px;
+ }
+
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }

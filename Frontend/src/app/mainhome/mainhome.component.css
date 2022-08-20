@@ -1,0 +1,64 @@
+.unlogin{
+    /* background-image: url('https://wallpaperbat.com/img/189576-reading-books-wallpaper-magical-reading.jpg'); */
+    background-image:url('https://scontent.ftrv1-1.fna.fbcdn.net/v/t1.6435-9/167119712_4528185880541191_6424774091173297024_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=I9v4v2-9LIoAX8rU2J0&_nc_ht=scontent.ftrv1-1.fna&oh=00_AT97MX5YBeJsxcZ0Gcq_ETwrpJVFUKaoOYBiMBG2F0vUxg&oe=63093765');
+    background-repeat : no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn {
+    position: fixed;
+    color: var(--textColor2);
+    border-radius: 50px;
+    background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+    background-size: 400%;
+    background-position: 0% 0%;
+    font-size: 26px;
+    padding: 15px;
+    color: azure;
+    font-weight: bolder;
+    margin-top: 1%;
+    margin-left: 25%;
+    
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+    background-size: 500%;
+    background-position: 0% 0%;
+    filter: blur(10px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  .btn:hover {
+    animation: gradientRotate 2s infinite;
+  }
+  .btn:hover::before {
+    opacity: 1;
+    animation: gradientRotate 2s infinite;
+  }
+  .btn:active {
+    color: #c3c4d5;
+  }
+  .btn:focus::before {
+    opacity: 1;
+  }
+  @keyframes gradientRotate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }

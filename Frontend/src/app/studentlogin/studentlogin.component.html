@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="homebody">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-6 col-lg-4">
+        <div class="transbox">
+          <div class="loginitem">
+            <form #form="ngForm" (ngSubmit)="form.valid&&loginuser()">
+              <p> Student</p>
+              <h3 class="text-center mb-4">Login</h3>
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input class="form-control" required placeholder='Enter Username' #username="ngModel" name="username"
+                  [(ngModel)]="user.username">
+                <small class="text-danger" *ngIf="form.submitted&&username.errors?.['required']">*Enter Username</small>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input class="form-control" required placeholder='Enter Password' #password="ngModel" type="password"
+                  name="password" [(ngModel)]="user.password">
+
+                <small class="text-danger" *ngIf="form.submitted&&password.errors?.['required']">*Enter Password</small>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col d-flex justify-content-between">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                    <label class="form-check-label" for="form2Example34">Remember</label>
+                  </div>
+                </div>
+
+                <div class="forgetpass">
+                  <a routerLink="/forgetpassword"><b>Forgot password?</b></a>
+                </div>
+              </div>
+
+
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary"><b>LOGIN</b></button>
+              </div>
+
+
+              <div class="text-center mt-4">
+                <h6>Not a member? <a routerLink="/register"><b>Register</b></a></h6>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

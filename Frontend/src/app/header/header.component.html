@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top navbar-light  justify-content-between">
+    <img src="https://ictkerala.org/assets/images/cropped-ict-ico.png" class="responsive" width="100" height="70" alt=""  >
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    
+    <svg viewBox="0 0 1320 200">
+     <a routerLink=""> <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+        IDAPP-ICTAK
+      </text></a>
+    </svg>
+   
+    <form class="form-inline">
+      <a routerLink="/register" class="btn btn-outline-primary" id="register" target="" role="button">REGISTER</a>
+    
+      <div class="dropdown">
+        <a routerLink="" class="btn btn-outline-primary" id="login" data-toggle="dropdown" target="" role="button">LOGIN</a>
+        <div class="container">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" routerLink="/studentlogin">STUDENT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/adminlogin">ADMIN</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/bmlogin">BATCH - <br>MANAGER</a>
+          </div>
+        </div>
+      </div>
+    </form>
+    </nav>
