@@ -1,0 +1,135 @@
+
+.homebody{
+    min-height: 600px;
+    margin-top: 3%;
+    background-color: white;
+    background-image: url("../../assets/images/img3.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  input{
+    font-weight: bold;
+   
+  }
+  
+  div.transbox {
+     /* margin: 70px;  */
+    background-color: #ffffff;
+    border: 5px solid rgb(0, 0, 0);
+    opacity: 0.7;
+    
+  }
+  .form-control{
+    width:40%;
+    border: 2px solid rgb(84, 6, 152);
+    color: rgb(119, 5, 180);
+    border-radius: 10px;
+  }
+  ::placeholder{
+    color: rgb(119, 5, 180);
+    font-weight: lighter;
+  }
+  .manager{
+    width: 800px;
+  
+  }
+  .email{
+    /* float: right; */
+    /* margin-top:-14%;
+    margin-right: -50%;  */
+    width: 800px;
+  }
+  
+  
+  .course{
+    float: right;
+    margin-top:-43%;
+    margin-right: -25%;
+    width: 600px;
+  }
+  .batch{
+    float: right;
+    margin-top:-30%;
+    margin-right: -25%;
+    width: 600px;
+  }
+  
+ 
+  
+  i{
+    color: rgb(196, 8, 8);
+  }
+  
+   .transbox{
+    padding: 20px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 80px;
+    display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  } 
+  
+  form{
+    font-family: 'Blinker', sans-serif;
+  
+  }
+  
+  option{
+  zoom: 1.1;
+  
+  }
+  label{
+    font-weight: bold;
+  }
+  .popup-button {
+   margin-left: 35%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 80px;
+    padding: 1em 3em;
+    background-size: 200% auto;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-image: linear-gradient(to right, #773ff8 0%, #f875e6 50%, #753ef5 100%);
+    transition: 0.5s;
+  }
+   .popup-button:hover {
+    background-position: right center;
+  }
+  
+  h3{
+    
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #572115 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 4s linear infinite;
+   display: inline-block;
+       font-size: 45px;
+       font-weight: bolder;
+      margin-left: 105px;
+  } 
+  
+  @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+  }
+  

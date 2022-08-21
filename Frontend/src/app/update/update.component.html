@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+
+<div  class="homebody">
+  <div class="container">
+<div class='card'>
+    <form (ngSubmit)="editProduct()">
+<div class='card-header'>
+ Edit Product
+</div>
+<div class='card-body'>            
+                                                                                                                                                                                                                                                                                                                                                                                                                            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+           <!-- <tr>
+              <td> <label>book Id</label></td>
+              <td><input type="text" name="p_id"  [(ngModel)]="productItem.productId"/></td>                  
+            </tr>      -->
+             <!-- <tr>
+                <td><label>image</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="buk.image"/></td>                  
+              </tr>    --> 
+              <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="buk.name"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>ID</label></td>
+                <td><input type="text" name="p_ID" [(ngModel)]="buk.ID"/></td>                  
+              </tr>  
+              <td><label>Email</label></td> 
+              <!-- <td><input type="text" name="p_Email" [(ngModel)]="bookItem.Email"/> -->
+                <!-- <td><input type="text" name="p_emailid" /></td>   -->
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                  [(ngModel)]="buk.Email"
+                  #email="ngModel"
+                  [class.is-invalid]="
+                    email.invalid && email.touched"
+                  required
+                />
+                <small
+                  [class.d-none]="email.valid"
+                  class="px-3 text-danger"
+                  >χ</small
+                >
+                <small
+                  [class.d-none]="email.invalid"
+                  class="px-3 text-success"
+                  >✓</small
+                >           
+              <tr>
+                <td><label>Password </label></td>
+                <td><input type="text" name="p_password" [(ngModel)]="buk.Password"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Course</label></td>
+                <td><input type="text" name="p_course" [(ngModel)]="buk.Course"/></td>                  
+              </tr>  <tr>
+                <td> <label>Batch</label></td>
+                <td><input type="text" name="p_batch" [(ngModel)]="buk.Batch"/></td>                  
+              </tr> 
+
+               
+                
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
