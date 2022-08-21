@@ -21,6 +21,7 @@
     "@angular/router": "~13.3.0",
     "@types/intl-tel-input": "^17.0.4",
     "bootstrap": "^5.2.0",
+    "jspdf": "^2.5.1",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.28",
     "tslib": "^2.3.0",

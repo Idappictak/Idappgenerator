@@ -1,0 +1,49 @@
+.table-success{
+    background-color: rgb(19, 226, 19);
+}
+.table-danger{
+    background-color: rgb(240, 9, 9);
+}
+.table-warning{
+    background-color: rgb(208, 255, 0);
+}
+.table-dark{
+    background-color: grey;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center {
+    text-align: center;
+    height:40px;
+    /* padding: 5px; */
+    /* border-radius: 100px; */
+    /* background-color: #cdbeee; */
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin:10px
+  }
+  thead{
+    color: skyblue;
+  }
+  #content {
+    /* width:1000px;
+    height:842px; */
+    position:relative;
+    display: flex;
+  }
+  #content { 
+    margin: 0; 
+    font-family: Roboto,"Helvetica Neue", sans-serif; 
+    /* padding: 100px 25px 25px 10px; */
+    padding-top: 100px;
+    background-image:url('../../assets/images/bg1.gif'); 
+    background-repeat:repeat;
+    overflow:hidden;
+    /* zoom: 1; */
+    /* background-size:contain; */
+    height:fit-content;
+    /* width: fit-content; */
+  } 
