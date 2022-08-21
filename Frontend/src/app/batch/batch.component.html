@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="container book">
+    <div class='card-header'>
+     <h3>BatchManger List</h3>
+    </div>
+
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'>
+
+          <thead>
+            <tr>
+
+              <th>Name</th>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Batch</th>
+              <th>Course</th>
+
+            </tr>
+            </thead>
+              <tbody>
+              <tr *ngFor = "let i of buk">
+
+               <!-- <td><img [src]="i.image" alt="image" id="img"></td>   -->
+               <td>{{i.name}}</td>
+                <td>{{i.ID}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.Batch}}</td>
+                <td>{{i.Course}}</td>
+                <td>
+                  <button class="btn btn-warning" style="cursor:pointer" (click)="editProduct(i)"> Edit</button>&nbsp;
+                  <button class="btn btn-danger" style="cursor:pointer"(click)="deleteProduct(i)"> Delete</button>
+                </td>
+                </tr>
+              </tbody> 
+        </table>
+      </div>
+    </div>
+</div>
+

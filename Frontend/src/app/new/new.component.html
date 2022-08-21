@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+   <div  class="homebody">
+    <div class="container">
+     
+     
+        <div class="col col-md-8">
+          <div class="transbox">
+            <div class="signupform"> 
+            
+              <form ngNativeValidate #form="ngForm" (ngSubmit)="register()">
+         
+              <h3 class="text-center mb-5">BatchManagers</h3>
+              <div class="manager">
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input  class="form-control" required placeholder='Enter Full Name' name="p_name"  [(ngModel)]="bookItem.name"/>
+                <!-- <small class="text-danger">*Name required</small> -->
+              </div></div>
+              <div class="ID">
+                <div class="mb-3">
+                  <label class="form-label">ID</label>
+                  <input  class="form-control" placeholder='Enter ID' name="p_id" required [(ngModel)]="bookItem.ID"/>
+                  <!-- <small class="text-danger" >*ID required</small> -->
+                </div></div>
+  
+              <div class="email">
+               <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input  class="form-control" placeholder='Enter Email ID' required  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="p_Email" [(ngModel)]="bookItem.Email" >
+                <!-- <small class="text-danger" >*Email required</small>
+                <small class="text-danger">*Enter valid email address</small> -->
+              </div></div>
+  
+                
+  
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password"placeholder='Enter Password' class="form-control"   minlength="8" required [(ngModel)]="bookItem.Password"/>
+                <!-- <small class="text-danger">*Password required</small>
+                <small class="text-danger">*Password must be 8 characters</small> -->
+  
+              </div>
+  
+  
+                
+  
+                  <div class='course'>
+                    <div class="mb-3">
+                      <label class="form-label">Course</label>
+                      <select class="form-control"  required name="p_course" [(ngModel)]="bookItem.Course">
+                    <option>Full Stack Developer</option>
+                    <option>Embedded System</option>
+                    <option>Robotic Process Automatic</option>
+                    <option>Machine Learning</option>
+                    <option>ARM Embedded Systems</option>
+                    </select>
+                    </div>
+                    </div>
+  
+  
+                    <div class='batch'>
+                      <div class="mb-3">
+                        <label class="form-label">Batch</label>
+                        <select class="form-control" required name="p_batch" [(ngModel)]="bookItem.Batch">
+                      <option>ABCD FSD 1</option>
+                      <option>ABCD FSD 2</option>
+                      <option>DSA 1</option>
+                      <option>DSA 2</option>
+                      </select>
+                      </div>
+                      </div>
+  
+  
+                     
+              <div class="text-center mt-4">
+                 <button type="submit"  class="btn btn-success" click="register()">Submit</button>
+              </div>
+           </form>
+          
+          
+         </div> 
+      
+    
+
+  
+

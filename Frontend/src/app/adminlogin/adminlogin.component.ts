@@ -23,7 +23,7 @@ export class AdminloginComponent implements OnInit {
     this.userservice.loginadmin(this.user).subscribe((res)=>{
      if(res.status){
       localStorage.setItem('token' , res.token)
-      this.route.navigate(['login'])
+      this.route.navigate(['/homeadmin'])
         }
        else{
       alert("Username or Password is incorrect")

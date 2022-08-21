@@ -13,6 +13,11 @@ import { Footer1Component } from './footer1/footer1.component';
 import { ApplyComponent } from './apply/apply.component';
 import { StatusComponent } from './status/status.component';
 import { CommonModule } from '@angular/common';
+import { HomeadminComponent } from './homeadmin/homeadmin.component';
+import { ConfirmcheckComponent } from './confirmcheck/confirmcheck.component';
+import { BatchComponent } from './batch/batch.component';
+import { NewComponent } from './new/new.component';
+import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   {path:"", component:MainhomeComponent},
@@ -25,7 +30,12 @@ const routes: Routes = [
   {path:'header1',component:Header1Component},
   {path:'footer1',component:Footer1Component},
   {path:'appForm',component:ApplyComponent,pathMatch: 'full'},
-  {path :'appStatus', component:StatusComponent}
+  {path :'appStatus', component:StatusComponent},
+  {path : 'homeadmin', component:HomeadminComponent},
+  {path:"confirmcheck",component:ConfirmcheckComponent},
+  {path:"batch",component:BatchComponent},
+  {path:"new",component:NewComponent},
+  {path:"update",component:UpdateComponent}
 ];
 
 @NgModule({

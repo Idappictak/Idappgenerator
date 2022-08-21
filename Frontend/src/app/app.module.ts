@@ -24,6 +24,13 @@ import { HomeComponent } from './home/home.component';
 import { StatusComponent } from './status/status.component';
 import { RouterModule } from '@angular/router';
 import { StudentService } from './student.service';
+import { BatchComponent } from './batch/batch.component';
+import { ConfirmcheckComponent } from './confirmcheck/confirmcheck.component';
+import { HomeadminComponent } from './homeadmin/homeadmin.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NewComponent } from './new/new.component';
+import { UpdateComponent } from './update/update.component';
+import { SeriveService } from './serive.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +48,12 @@ import { StudentService } from './student.service';
     Header1Component,
     HomeComponent,
     StatusComponent,
+    BatchComponent,
+    ConfirmcheckComponent,
+    HomeadminComponent,
+    NavbarComponent,
+    NewComponent,
+    UpdateComponent,
    
     
   ],
@@ -55,7 +68,7 @@ import { StudentService } from './student.service';
    
   ],
  
-  providers: [ UserService,StudentService,HttpClient,HttpClientModule],
+  providers: [ UserService,StudentService,SeriveService, HttpClient,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

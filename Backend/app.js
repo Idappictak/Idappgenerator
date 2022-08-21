@@ -14,7 +14,7 @@ const admindata = require("./src/model/admindata.js")
 const bmdata = require("./src/model/bmdata.js")
 const studentdata = require("./src/model/studentdata.js")
 const passwordreset = require("./src/model/passwordreset.js")
-
+const blog=require("./src/model/mongo.js")
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -337,8 +337,162 @@ app.post("/register", (req, res) => {
      });
      
 
+//admin//
 
+function sendEmail(data) {
+    try {
+        console.log(data)
+        let transport = {
+            host: "smtp-relay.sendinblue.com",
+            port: 587,
+            secure: false, // upgrade later with STARTTLS
+            auth: {
+                user: "idapp3ictak@gmail.com",
+                pass: process.env.MAILER_PASS,
+            }
+        }
+        let email_data = {
+            from: "idapp3ictak@gmail.com",
+            to: data.email,
+            subject: "Trainer Approved",
+            text: `Your emplyment type `,
+            html: `<p> Hi successfully registered</p>`
+        };
+        let transporter = nodemailer.createTransport(transport)
+  
+        transporter.sendMail(email_data, function (err, info) {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log(info)
+            }
+        })
+    } catch (error) {
+        return error
+    }
+  }
+  app.get("/batch",(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    blog.find()
+    .then(function(batch){
+        res.send(batch)
+    })
+    
+})
 
+app.post("/new",(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    console.log(req.body);
+
+    var products = {
+        name:req.body.item.name,
+        ID:req.body.item.ID,
+        Email:req.body.item.Email,
+        Password:req.body.item.Password,
+        Course:req.body.item.Course,
+        Batch:req.body.item.Batch
+       
+       
+        
+    }
+   var product = new blog(products)
+   product.save();
+})
+
+app.get('/:_id',(req, res) => {
+  
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+  
+    const id = req.params.id;
+      blog.findOne({"_id":id})
+      .then((product)=>{
+          res.send(product);
+      });
+  })
+
+  app.put('/update',(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    console.log(req.body)
+    id=req.body._id,
+    
+    name = req.body.name,
+    ID = req.body.ID,
+    Email= req.body.Email,
+    Password = req.body.Password,
+    Course = req.body.Course,
+    Batch = req.body.Batch,
+    
+   blog.findByIdAndUpdate({"_id":id},
+                                {$set:{
+                                "name":name,
+                                "ID":ID,
+                                "Email":Email,
+                                "Password":Password,
+                                "Course":Course,
+                                "Batch":Batch,
+                                }})
+   .then(function(){
+       res.send();
+   })
+ })
+
+ app.delete('/remove/:id',(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    
+   
+    id = req.params.id;
+    blog.findByIdAndDelete({"_id":id})
+    .then(()=>{
+        console.log('success')
+        res.send();
+    })
+  })
+  app.post("/new", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Method:GET,POST,PUT,DELETE");
+    newarray = req.body
+    courseData
+      .findOneAndUpdate(
+        {},
+        {
+          $set: {
+            course: newarray,
+          },
+        }
+      )
+      .then((data) => {
+        console.log(data);
+        res.send(data);
+      });
+  });
+  
+  // Batch Action
+  
+  app.post("/new", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Method:GET,POST,PUT,DELETE");
+    newarray = req.body
+    courseData
+      .findOneAndUpdate(
+        {},
+        {
+          $set: {
+            batch: newarray,
+          },
+        }
+      )
+      .then((data) => {
+        console.log(data);
+        res.send(data);
+      });
+  });
 
 
 
