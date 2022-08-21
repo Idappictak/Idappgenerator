@@ -282,51 +282,60 @@ This is a system generated mail. Please do not reply to this e-mail address. If 
 
 
 
-// app.post('/sendmail',(req,res)=>{
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+app.post("/register", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Method:GET,POST,PUT,DELETE");
 
-//     console.log(req.body)
-
-//    var user ={
-//         email:req.body.data.email,
-//              }
-//     var user = new passwordreset(user);
-//     user.save();
-//    studentdata.findOne({"email":user.email}.then((data)=>{
-//     console.log(data)  
-//     // var pass={
-//     //     email: req.body.data.email
-//     //          }
-//         var smtpTransport = nodemailer.createTransport({
-//             service: 'Gmail', 
-//             auth: {
-//                 user: 'idapp3ictak@gmail.com',
-//                 pass: "bjfgowfeizejsjwo"
-//             },tls: {
-//           rejectUnauthorized: false
-//                  }
-//            });
-//         var mailOptions = {
-//                 from: 'idapp3ictak@gmail.com',
-//                 to: user.email   ,
-//                 subject: 'Form Accepted',
-//                 text: `Congratulations..! \n the password is ` + studentdata.password + `This mail is sent from the course management system.`
-//             };
-//             smtpTransport.sendMail(mailOptions, function(err) {
-//                 if(err){
-//                     console.log(err);
-//                     res.status(401).send( "We seem to be experiencing issues. Please try again later.");
-//                     // res.redirect("/");
-//                 }else{
-//                     res.send()
-//                 console.log("success...mail sent");
-//                 }
-            
-//             });
-   
-//         }));
-//     });
+    studentid.find({email:req.body.data.email}).then((data)=>{
+        if(data.length!=0)
+         
+           studentid
+       .findOneAndUpdate(
+         { email: req.body.data.email },
+         {
+            $set : {
+             name:req.body.data.name,
+             email:req.body.data.email,
+             phone:req.body.data.phone,
+             photo:req.body.data.photo,
+             course:req.body.data.course,
+             batch:req.body.data.batch,
+             startDate:req.body.data.startDate,
+             endDate:req.body.data.endDate,
+            status: "Pending",
+           
+           }
+     
+         }
+       )
+       .then((data) => {
+         res.send(data);
+       });
+     
+     
+       else{
+         res.send(null)
+       }
+     
+      })
+     
+      });
+      app.get("/register", (req, res) => {
+       studentid
+         .findOne({ status: req.params.status })
+         .then((data) => {
+           res.send(data);
+         });
+     });
+     
+      app.get("/register", (req, res) => {
+       studentid
+         .findOne({ _id: req.params.id })
+         .then((data) => {
+           res.send(data);
+         });
+     });
+     
 
 
 

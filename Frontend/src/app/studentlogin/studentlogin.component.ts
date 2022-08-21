@@ -21,7 +21,8 @@ export class StudentloginComponent implements OnInit {
     this.userservice.loginuser(this.user).subscribe((res)=>{
      if(res.status){
       localStorage.setItem('token' , res.token)
-      this.route.navigate(['login'])
+      this.route.navigate(['/home'])
+
         }
        else{
       alert("Username or Password is incorrect")
