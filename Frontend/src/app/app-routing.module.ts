@@ -18,6 +18,12 @@ import { ConfirmcheckComponent } from './confirmcheck/confirmcheck.component';
 import { BatchComponent } from './batch/batch.component';
 import { NewComponent } from './new/new.component';
 import { UpdateComponent } from './update/update.component';
+import { HomebmComponent } from './homebm/homebm.component';
+import { ApplnsComponent } from './applns/applns.component';
+import { HistoryComponent } from './history/history.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AddressComponent } from './address/address.component';
+import { PhoneComponent } from './phone/phone.component';
 
 const routes: Routes = [
   {path:"", component:MainhomeComponent},
@@ -35,7 +41,15 @@ const routes: Routes = [
   {path:"confirmcheck",component:ConfirmcheckComponent},
   {path:"batch",component:BatchComponent},
   {path:"new",component:NewComponent},
-  {path:"update",component:UpdateComponent}
+  {path:"update",component:UpdateComponent},
+  {path:"homebm",component:HomebmComponent},
+  {path:'applns',component:ApplnsComponent},
+  {path:'history',component:HistoryComponent},
+  {path:'contacts',component:ContactsComponent,
+   children:[
+  {path:'address',component:AddressComponent},
+  {path:'phone',component:PhoneComponent}
+]}, 
 ];
 
 @NgModule({

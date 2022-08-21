@@ -23,7 +23,7 @@ export class BmloginComponent implements OnInit {
     this.userservice.loginbm(this.user).subscribe((res)=>{
      if(res.status){
       localStorage.setItem('token' , res.token)
-      this.route.navigate(['login'])
+      this.route.navigate(['/homebm'])
         }
        else{
       alert("Username or Password is incorrect")

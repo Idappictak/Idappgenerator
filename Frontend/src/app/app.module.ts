@@ -31,6 +31,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NewComponent } from './new/new.component';
 import { UpdateComponent } from './update/update.component';
 import { SeriveService } from './serive.service';
+import { AddressComponent } from './address/address.component';
+import { ApplnsComponent } from './applns/applns.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { FooterbmComponent } from './footerbm/footerbm.component';
+import { HeaderbmComponent } from './headerbm/headerbm.component';
+import { HistoryComponent } from './history/history.component';
+import { HomebmComponent } from './homebm/homebm.component';
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +62,14 @@ import { SeriveService } from './serive.service';
     NavbarComponent,
     NewComponent,
     UpdateComponent,
+    AddressComponent,
+    ApplnsComponent,
+    ContactsComponent,
+    FooterbmComponent,
+    HeaderbmComponent,
+    HistoryComponent,
+    HomebmComponent,
+    PhoneComponent,
    
     
   ],
